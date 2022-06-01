@@ -69,4 +69,3 @@ type ColorsType = {
     hex: string
     value: string
 }
-

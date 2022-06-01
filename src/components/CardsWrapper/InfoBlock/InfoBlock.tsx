@@ -46,7 +46,7 @@ export const InfoBlock = ({cards}: { cards: ResponseCardsType }) => {
 
             <div className={styled.size_block}>
                 {cards.sizes.map(size =>
-                    <SizeWrapper key={size.id} isActual={size.isActual} value={size.value}/>)}
+                    <SizeWrapper key={size.id} isActual={size.isActual} value={size.value}/>).slice(0, 8)}
             </div>
 
             <h2>Рост: </h2>
@@ -57,8 +57,8 @@ export const InfoBlock = ({cards}: { cards: ResponseCardsType }) => {
             <ButtonBlock/>
             <h2>Цвета:</h2>
             <div>
-                {cards.colors.map(color =>
-                    <p key={color.id} className={styled.colors} style={{backgroundColor: `${color.hex}`}}/>)}
+                <img style={{border: `${cards.isActive ? '1px solid #282828' : 'none'}`}} className={styled.colors}
+                     src={cards.photos.slice(0, 1).toString()} alt={cards.photos.slice(0, 1).toString()}/>
             </div>
         </div>
     );

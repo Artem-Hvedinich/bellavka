@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from './ButtonBlock.module.css'
-import {BasketImg} from "../../../../common/images/BasketImg";
+import {BasketImg} from "../../../../common/images/MainFooterImages/BasketImg";
 import {ClickImg} from "../../../../common/images/ClickImg";
 
 export const ButtonBlock = () => {

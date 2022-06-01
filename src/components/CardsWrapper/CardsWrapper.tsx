@@ -14,7 +14,7 @@ export const CardsWrapper = () => {
             <PhotoBlock photos={cards.photos}
                         salePercent={cards.salePercent}
                         video={cards.videos[0]["540p"]}/>
-            <LinkBlock/>
+            <LinkBlock cards={cards}/>
             <InfoBlock cards={cards}/>
         </div>
     );
