@@ -1,0 +1,29 @@
+.photo_block {
+    position: relative;
+    height: 25rem;
+}
+
+.photo{
+    height: 400px;
+}
+
+.swiper-pagination{
+    background-color: red;
+}
+
+.sale-block {
+     position: absolute;
+     z-index: 1;
+     bottom: 26px;
+     left: 20px;
+     font-size: 14px;
+     font-weight: 700;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 3rem;
+     height: 1.5rem;
+     border-radius: 10px;
+     background-color: #8B123B;
+     color: white;
+ }
