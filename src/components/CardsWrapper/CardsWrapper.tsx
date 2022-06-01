@@ -1,13 +1,21 @@
 import React from 'react';
-import {useAppSelector} from "../store/store";
-import {ResponseCardsType} from "../types/types";
+import {useAppSelector} from "../../store/store";
+import {ResponseCardsType} from "../../types/types";
+import {PhotoBlock} from './PhotoBlock/PhotoBlock';
+import {LinkBlock} from "./LinkBlock/LinkBlock";
+import {InfoBlock} from "./InfoBlock/InfoBlock";
 
 export const CardsWrapper = () => {
     const cards = useAppSelector<ResponseCardsType>(state => state.CardsReducer.card)
-    console.log(cards)
+    console.log('CardsWrapper rendered', cards)
+
     return (
         <div>
-            {cards.photos.map(photo => <img src={photo} alt={photo}/>)}
+            <PhotoBlock photos={cards.photos}
+                        salePercent={cards.salePercent}
+                        video={cards.videos[0]["540p"]}/>
+            <LinkBlock/>
+            <InfoBlock cards={cards}/>
         </div>
     );
 };

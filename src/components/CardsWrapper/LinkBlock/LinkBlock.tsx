@@ -1,25 +1,23 @@
 import React from 'react';
-import styled from './OneLinkBlock.module.css'
-import {RightArrow} from "../../../../common/images/RightArrow";
+import styles from './LinkBlock.module.css'
+import {modalState} from "../../../store/localStore";
+import {OneLinkBlock} from "./OneLinkBlock/OneLinkBlock";
 
-interface ModalType {
-    count: number
-    title: string
-    icon: any
-    onClick: () => void
-}
-
-export const OneLinkBlock = ({count, title, icon, onClick}: ModalType) => {
+export const LinkBlock = () => {
     return (
-        <div className={styled.modal} onClick={onClick}>
-            <div className={styled.header_block}>
-                <div className={styled.icon_count_block}>
-                    {icon}
-                    +{count}
-                </div>
-                <RightArrow/>
+        <div className={styles.link_block}>
+
+            <div>Heard</div>
+
+            <div className={styles.modal_block} >
+                {modalState.map(modal => <OneLinkBlock
+                    onClick={modal.onClick}
+                    title={modal.title}
+                    count={modal.count}
+                    icon={modal.icon}/>
+                )}
             </div>
-            <div>{title}</div>
         </div>
     );
 };
+

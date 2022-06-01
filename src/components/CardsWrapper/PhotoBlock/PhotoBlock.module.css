@@ -1,29 +1,43 @@
 .photo_block {
     position: relative;
-    height: 25rem;
+    height: 100%;
+    width:auto;
 }
 
-.photo{
-    height: 400px;
+.swiper{
+    height: 375px;
 }
 
-.swiper-pagination{
-    background-color: red;
+.sale {
+    position: absolute;
+    z-index: 1;
+    bottom: 40px;
+    left: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 1.5rem;
+    border-radius: 10px;
+    background-color: #8B123B;
+    color: white;
 }
 
-.sale-block {
-     position: absolute;
-     z-index: 1;
-     bottom: 26px;
-     left: 20px;
-     font-size: 14px;
-     font-weight: 700;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     width: 3rem;
-     height: 1.5rem;
-     border-radius: 10px;
-     background-color: #8B123B;
-     color: white;
- }
+.pagination {
+    position: absolute;
+    z-index: 2;
+    color: black;
+    background-color: black;
+}
+
+img {
+    height: 376px;
+}
+
+video {
+    height: 445px;
+    overflow: hidden;
+    margin: 0 auto;
+}

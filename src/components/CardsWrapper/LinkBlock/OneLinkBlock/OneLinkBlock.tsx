@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from './OneLinkBlock.module.css'
-import {RightArrow} from "../../../common/images/RightArrow";
+import {RightArrow} from "../../../../common/images/RightArrow";
 
 interface ModalType {
     count: number
@@ -15,7 +15,7 @@ export const OneLinkBlock = ({count, title, icon, onClick}: ModalType) => {
             <div className={styled.header_block}>
                 <div className={styled.icon_count_block}>
                     {icon}
-                    +{count}
+                    <p className={styled.count}>+{count}</p>
                 </div>
                 <RightArrow/>
             </div>

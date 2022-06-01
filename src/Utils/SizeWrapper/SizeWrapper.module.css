@@ -1,0 +1,13 @@
+.wrapper {
+    width: 66px;
+    height: 40px;
+    border: 1px solid #EEEEEE;
+    border-radius: 7px;
+    flex: 0 0 auto;
+    margin: 0 8px;
+}
+
+.wrapper:first-child,
+.wrapper:last-child {
+    margin: 0;
+}

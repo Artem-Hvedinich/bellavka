@@ -1,14 +1,22 @@
 .modal {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    width: 109px;
+    justify-content: space-between;
+    min-width: 80px;
     height: 86px;
     font-weight: 400;
     font-size: 14px;
     border: 1px solid #DDDDDD;
     border-radius: 4px;
     padding: 8px 12px;
+    overflow-wrap: anywhere
+}
+
+.modal:first-child{
+    margin-right: 8px;
+}
+.modal:last-child{
+    margin-left: 8px;
 }
 
 .icon_count_block {
@@ -20,5 +28,9 @@
 .header_block {
     display: flex;
     justify-content: space-between;
+}
+
+.count {
+    margin-left: 6px;
 }
 
