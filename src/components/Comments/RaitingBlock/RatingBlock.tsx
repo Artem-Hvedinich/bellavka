@@ -4,16 +4,16 @@ import {ResponseCommentType} from "../../../types/commentType";
 import {SizesRating} from './SizesRating/SizesRating';
 import {RatingStarsComponent} from "../../../Utils/RatingStarsComponent/RatingStarsComponent";
 
-export const RatingBlock = ({comments}: { comments: ResponseCommentType }) => {
+export const RatingBlock = React.memo(({comments}: { comments: ResponseCommentType }) => {
 
     const rating = Math.ceil(+comments.statistics.rating.rating)
 
     return (
         <div className={`${styled.rating_block} jc_ai_center`}>
-           <div style={{fontSize:'27px'}}> <RatingStarsComponent margin={10} rating={rating}/></div>
+            <div style={{fontSize: '27px'}}><RatingStarsComponent margin={10} rating={rating}/></div>
             <div>{comments.meta.total} отзывов</div>
             {comments.statistics.size.map(m =>
                 <SizesRating name={m.name} percent={m.percent}/>)}
         </div>
     );
-};
+})

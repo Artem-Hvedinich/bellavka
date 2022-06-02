@@ -13,6 +13,7 @@ export const Comments = () => {
     if (!comments.message) {
         return <div>...Loading</div>
     }
+
     return (
         <div style={{minHeight: "100vh"}}>
             <NavLink to={'/card'}><ButtonBack/></NavLink>
@@ -21,7 +22,7 @@ export const Comments = () => {
             <RatingBlock comments={comments}/>
             {comments.data.map(data => <OneCommentBlock data={data}/>)}
             <div style={{width: '100%',}} className={'jc_ai_center'}>
-                <button onClick={()=>alert('in progress')} className={'button_wrapper'}>Оставить отзыв</button>
+                <button onClick={() => alert('in progress')} className={'button_wrapper'}>Оставить отзыв</button>
             </div>
             <MainFooter/>
         </div>

@@ -9,8 +9,7 @@ import {ShareImg} from "../../../common/images/LinkImages/ShareImg";
 import {CottonImg} from "../../../common/images/LinkImages/CottonImg";
 import {LikeImg} from "../../../common/images/LikeImg";
 
-export const LinkBlock = ({cards}: { cards: ResponseCardsType }) => {
-
+export const LinkBlock = React.memo(({cards}: { cards: ResponseCardsType }) => {
     const [like, setLike] = useState(false)
     const onClickHandler = () => setLike(!like)
     const modalState = [
@@ -49,5 +48,5 @@ export const LinkBlock = ({cards}: { cards: ResponseCardsType }) => {
             </div>
         </div>
     );
-};
+})
 

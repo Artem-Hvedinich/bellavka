@@ -10,9 +10,8 @@ export const Card = () => {
     const cards = useAppSelector<ResponseCardsType>(state => state.CardsReducer.card);
 
     if (!cards.id) {
-        return <div>...Loading</div>
+        return <div className={'jc_ai_center'} style={{height:'100vh'}}>...Loading</div>
     }
-
     return (
         <div>
             <PhotoBlock cards={cards}/>

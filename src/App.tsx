@@ -9,8 +9,6 @@ import {Comments} from "./components/Comments/Comments";
 import {ErrorPage} from "./components/ErrorPage";
 
 function App() {
-    console.log('App rendered')
-
     const dispatch = useDispatch<TypedDispatch>();
     useEffect(() => {
         dispatch(getProductCard())

@@ -14,8 +14,8 @@ type PropsType = {
 
 export const PhotoBlock: FC<PropsType> = React.memo(({cards}) => {
 
-        console.log(cards)
-        const mySlidesPerView = (window.innerWidth / 250).toFixed(2);
+    const mySlidesPerView = (window.innerWidth / 250).toFixed(2);
+
         let mappingPhoto = cards.photos.map((photo, i) =>
             <SwiperSlide key={photo + i}>
                 <img className={styles.photo}

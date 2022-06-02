@@ -5,8 +5,7 @@ import styled from './InfoBlock.module.css'
 import {ButtonBlock} from "./ButtonBlock/ButtonBlock";
 import {MoreImg} from "../../../common/images/MoreImg";
 
-export const InfoBlock = ({cards}: { cards: ResponseCardsType }) => {
-
+export const InfoBlock = React.memo(({cards}: { cards: ResponseCardsType }) => {
     const [modalPrice, setModalPrice] = useState(false)
     const [modalSize, setModalSize] = useState(false)
 
@@ -67,5 +66,5 @@ export const InfoBlock = ({cards}: { cards: ResponseCardsType }) => {
             </div>
         </div>
     );
-};
+})
 
