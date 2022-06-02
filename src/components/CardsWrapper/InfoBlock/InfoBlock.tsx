@@ -44,14 +44,14 @@ export const InfoBlock = React.memo(({cards}: { cards: ResponseCardsType }) => {
                 industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
             </div>}
 
-            <div className={styled.size_block}>
+            <div className={'infinity_scroll_block'}>
                 {cards.sizes.map(size =>
                     <SizeWrapper key={size.id} isActual={size.isActual} value={size.value}/>).slice(0, 8)}
             </div>
 
             <div className={'middle_margin'}>
                 <h2 className={'min_margin'}>Рост: </h2>
-                <div className={styled.size_block}>
+                <div className={'infinity_scroll_block'}>
                     {cards.heights.map(height =>
                         <SizeWrapper key={height.id} value={height.value}/>)}
                 </div>

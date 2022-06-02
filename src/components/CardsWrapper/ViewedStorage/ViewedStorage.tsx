@@ -18,17 +18,19 @@ export const ViewedStorage = ({cards}: { cards: ResponseCardsType }) => {
     sessionStorage.setItem('ViewedStorageArray', JSON.stringify(sessionStore));
 
     return (
-        <div className={'middle_margin'}>
+        <div className={` large_margin`}>
             <h2 className={styled.title}>Вы недавно смотрели</h2>
-            {sessionStore.map((store, i) =>
-                <OneViewedStorageBlock
-                    key={store.retail + i}
-                    name={store.name}
-                    img={store.img}
-                    retail={store.retail}
-                    retailOld={store.retailOld}
-                    kits={store.kits}
-                />)}
+            <div className={'infinity_scroll_block'}>
+                {sessionStore.map((store, i) =>
+                    <OneViewedStorageBlock
+                        key={store.retail + i}
+                        name={store.name}
+                        img={store.img}
+                        retail={store.retail}
+                        retailOld={store.retailOld}
+                        kits={store.kits}
+                    />)}
+            </div>
         </div>
     )
 }

@@ -32,8 +32,22 @@ code {
     margin: 20px 0;
 }
 
+.large_margin {
+    margin: 50px 0;
+}
+
 .text_wrap {
     overflow-wrap: break-word;;
+}
+
+.infinity_scroll_block {
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+}
+
+.infinity_scroll_block::-webkit-scrollbar {
+    display: none;
 }
 
 .button_wrapper {

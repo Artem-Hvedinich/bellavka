@@ -1,3 +1,9 @@
-.title{
+.scroll_block {
+    display: flex;
+    overflow-x: auto;
+}
+
+.title {
     margin: 16px;
+    color: #BD9365;
 }
