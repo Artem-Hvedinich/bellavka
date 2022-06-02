@@ -1,21 +1,17 @@
 import React from 'react';
 import styled from './ViewedStorage.module.css'
-import {ResponseCardsType} from "../../../types/cardTypes";
 import {OneViewedStorageBlock} from './OneViewedStorageBlock/OneViewedStorageBlock';
 
-export const ViewedStorage = ({cards}: { cards: ResponseCardsType }) => {
+type sessionStore = {
+    retail: number
+    retailOld: number
+    name: string
+    kits: string
+    img: string
 
-    let sessionStore = [];
-    let get = sessionStore.unshift({
-        retail: cards.price.retail,
-        retailOld: cards.price.retailOld,
-        name: cards.brand.value,
-        kits: cards.kits.map(m => m.value).join(', '),
-        img: cards.photos.slice(0, 1).toString()
-    });
-    //@ts-ignore
-    JSON.parse(sessionStorage.getItem(get));
-    sessionStorage.setItem('ViewedStorageArray', JSON.stringify(sessionStore));
+}
+
+export const ViewedStorage = ({sessionStore}: { sessionStore: sessionStore[] }) => {
 
     return (
         <div className={` large_margin`}>
