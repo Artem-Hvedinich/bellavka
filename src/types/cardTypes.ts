@@ -1,5 +1,8 @@
 export type ResponseCardsType = {
-    brand: {}
+    brand: {
+        id:number
+        value:string
+    }
     brandId: number
     category: {}
     categoryId: number

@@ -12,6 +12,7 @@ import {LikeImg} from "../../../common/images/LikeImg";
 export const LinkBlock = React.memo(({cards}: { cards: ResponseCardsType }) => {
     const [like, setLike] = useState(false)
     const onClickHandler = () => setLike(!like)
+
     const modalState = [
         {title: 'Смотреть видеообзоры', count: cards.videosCount, icon: <VideoClipImg/>, link: '/404'},
         {title: 'Отзывы покупателей', count: cards.reviewsCount, icon: <ReviewsImg/>, link: '/comments',},
