@@ -14,8 +14,7 @@ interface ModalType {
 
 export const OneLinkBlock = React.memo(({modal}: ModalType) => {
     return (
-        <NavLink style={{color: '#BD9365'}} to={modal.link}>
-            <div className={styled.modal}>
+        <NavLink className={styled.modal} to={modal.link}>
                 <div className={styled.header_block}>
                     <div className={styled.icon_count_block}>
                         {modal.icon}
@@ -24,7 +23,6 @@ export const OneLinkBlock = React.memo(({modal}: ModalType) => {
                     <RightArrow/>
                 </div>
                 <div>{modal.title}</div>
-            </div>
         </NavLink>
     );
 })

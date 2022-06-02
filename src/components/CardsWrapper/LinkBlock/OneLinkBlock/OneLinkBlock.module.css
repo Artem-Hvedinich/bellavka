@@ -9,7 +9,8 @@
     border: 1px solid #DDDDDD;
     border-radius: 4px;
     padding: 8px 12px;
-    overflow-wrap: anywhere
+    overflow-wrap: anywhere;
+    color: #BD9365;
 }
 
 .modal:first-child {

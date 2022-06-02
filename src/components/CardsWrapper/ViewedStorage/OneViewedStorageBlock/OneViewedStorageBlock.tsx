@@ -28,7 +28,7 @@ export const OneViewedStorageBlock = ({retail, retailOld, name, kits, img}: View
                     <p className={`${styled.name}`}>{name}</p>
                     <p className={styled.kits}>{kits}</p>
                 </div>
-                <div className={'min_margin'}><BasketImg/></div>
+                <div className={'min_margin'} onClick={()=>alert('sorry')}><BasketImg/></div>
                 <div className={`fa fa-plus ${styled.plus}`}/>
             </div>
         </div>
