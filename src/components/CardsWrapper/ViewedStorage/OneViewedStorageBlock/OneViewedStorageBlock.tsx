@@ -14,6 +14,7 @@ interface ViewedType {
 export const OneViewedStorageBlock = ({retail, retailOld, name, kits, img}: ViewedType) => {
     const [like, setLike] = useState(false)
     const onClickHandler = () => setLike(!like)
+
     return (
         <div className={styled.viewed_block}>
             <div className={styled.like}><LikeImg onClick={onClickHandler} like={like}/></div>
