@@ -10,10 +10,14 @@ import {localStorageFunction} from '../../Utils/localStorageFunction';
 
 export const Card = () => {
     const cards = useAppSelector<ResponseCardsType>(state => state.CardsReducer.card);
+
+
     if (!cards.id) {
         return <div className={'jc_ai_center'} style={{height: '100vh'}}>...Loading</div>
     }
-    const sessionStorage = localStorageFunction(cards)
+
+    //функция работает с Session Storage + обрезает до нужного нам количества
+    const sessionStorage = localStorageFunction(cards, 5)
 
     return (
         <div>

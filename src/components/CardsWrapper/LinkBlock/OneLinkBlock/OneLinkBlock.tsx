@@ -4,24 +4,26 @@ import {RightArrow} from "../../../../common/images/RightArrow";
 import {NavLink} from "react-router-dom";
 
 interface ModalType {
-    count: number
-    title: string
-    icon: any
-    link: string
+    modal: {
+        count: number
+        title: string
+        icon: any
+        link: string
+    }
 }
 
-export const OneLinkBlock = React.memo(({count, title, icon, link}: ModalType) => {
+export const OneLinkBlock = React.memo(({modal}: ModalType) => {
     return (
-        <NavLink style={{color: '#BD9365'}} to={link}>
+        <NavLink style={{color: '#BD9365'}} to={modal.link}>
             <div className={styled.modal}>
                 <div className={styled.header_block}>
                     <div className={styled.icon_count_block}>
-                        {icon}
-                        <p className={styled.count}>+{count}</p>
+                        {modal.icon}
+                        <p className={styled.count}>+{modal.count}</p>
                     </div>
                     <RightArrow/>
                 </div>
-                <div>{title}</div>
+                <div>{modal.title}</div>
             </div>
         </NavLink>
     );

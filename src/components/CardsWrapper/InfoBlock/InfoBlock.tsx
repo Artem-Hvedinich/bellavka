@@ -28,6 +28,7 @@ export const InfoBlock = React.memo(({cards}: { cards: ResponseCardsType }) => {
 
             </div>
 
+            {/*Тестовая модалка*/}
             {modalPrice && <div style={{border: '1px solid black'}}>
                 <b>TEST MODAL OF PRICE</b><br/>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
@@ -38,6 +39,7 @@ export const InfoBlock = React.memo(({cards}: { cards: ResponseCardsType }) => {
                 <p onClick={() => setModalSize(!modalSize)} className={styled.table_size}>Таблица размеров</p>
             </div>
 
+            {/*Тестовая модалка*/}
             {modalSize && <div style={{border: '1px solid black'}}>
                 <b>TEST MODAL OF SIZE</b><br/>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
@@ -60,6 +62,7 @@ export const InfoBlock = React.memo(({cards}: { cards: ResponseCardsType }) => {
             <div className={'middle_margin'}>
                 <h2 className={'min_margin'}>Цвета:</h2>
                 <div>
+                    {/*На бэке не было фото пришлось вырезать */}
                     <img style={{border: `${cards.isActive ? '1px solid #282828' : 'none'}`}} className={styled.colors}
                          src={cards.photos.slice(0, 1).toString()} alt={cards.photos.slice(0, 1).toString()}/>
                 </div>

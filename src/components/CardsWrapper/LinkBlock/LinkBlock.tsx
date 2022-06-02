@@ -27,6 +27,7 @@ export const LinkBlock = React.memo(({cards}: { cards: ResponseCardsType }) => {
                     <a href={cards.url} target='_blank'>
                         <ShareImg/></a>
                 </div>
+                
                 <div className={styles.die_block}>
                     <div className={styles.best}>#лучшее</div>
                     <div className={styles.available}>{cards.status}</div>
@@ -39,12 +40,7 @@ export const LinkBlock = React.memo(({cards}: { cards: ResponseCardsType }) => {
 
             <div className={styles.modal_block}>
                 {modalState.map(modal =>
-                    <OneLinkBlock
-                        key={modal.icon + modal.title}
-                        link={modal.link}
-                        title={modal.title}
-                        count={modal.count}
-                        icon={modal.icon}/>
+                    <OneLinkBlock modal={modal}/>
                 )}
             </div>
         </div>

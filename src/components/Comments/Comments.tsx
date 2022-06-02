@@ -9,6 +9,7 @@ import {OneCommentBlock} from "./OneCommentBlock/OneCommentBlock";
 
 export const Comments = () => {
     const comments = useAppSelector(state => state.CardsReducer.comments)
+    console.log(comments)
 
     if (!comments.message) {
         return <div>...Loading</div>
@@ -16,7 +17,9 @@ export const Comments = () => {
 
     return (
         <div style={{minHeight: "100vh"}}>
+
             <NavLink to={'/card'}><ButtonBack/></NavLink>
+
             <h2 style={{marginTop: '16px'}} className='jc_ai_center'>Отзывы</h2>
             <LinkButton/>
             <RatingBlock comments={comments}/>

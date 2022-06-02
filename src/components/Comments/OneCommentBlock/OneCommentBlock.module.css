@@ -32,21 +32,3 @@
     border-radius: 4px;
     margin: 10px 10px 0 0;
 }
-
-.answers_block {
-    display: flex;
-    margin-top: 20px;
-}
-
-.answers {
-    width: 100%;
-    background: #FAF1E8;
-    border-radius: 10px;
-    padding: 16px;
-    margin-left: 30px;
-}
-
-.answers_user {
-    display: flex;
-    align-items: center;
-}

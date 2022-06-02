@@ -14,8 +14,10 @@ type PropsType = {
 
 export const PhotoBlock: FC<PropsType> = React.memo(({cards}) => {
 
-    const mySlidesPerView = (window.innerWidth / 250).toFixed(2);
+        //Контролирует количество фотографий
+        const mySlidesPerView = (window.innerWidth / 250).toFixed(2);
 
+        // Мапит фото и добавляет видео в массив
         let mappingPhoto = cards.photos.map((photo, i) =>
             <SwiperSlide key={photo + i}>
                 <img className={styles.photo}
@@ -24,14 +26,12 @@ export const PhotoBlock: FC<PropsType> = React.memo(({cards}) => {
                 />
             </SwiperSlide>
         )
-
         mappingPhoto = [mappingPhoto[0],
             <SwiperSlide key={cards.videos[0].adaptive}>
                 <video src={cards.videos[0]["540p"]} autoPlay muted loop>
                 </video>
             </SwiperSlide>,
-            ...mappingPhoto.slice(1, 12)]
-
+            ...mappingPhoto.slice(1, 12)] //битое фото обрезал слайсом
 
         return (
             <div className={styles.photo_block}>
@@ -47,7 +47,7 @@ export const PhotoBlock: FC<PropsType> = React.memo(({cards}) => {
                 </Swiper>
                 <div className={styles.sale}>{`-${cards.salePercent}%`}</div>
                 <ButtonBack onClick={() => {
-                    alert('Sorry, this button in progress')
+                    alert('Sorry, this button in progress') //Заглушка
                 }}/>
                 <SearchImg/>
             </div>

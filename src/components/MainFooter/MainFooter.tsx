@@ -16,6 +16,7 @@ export const FooterMenu = [
 ]
 
 export const MainFooter = () => {
+    // Красит нужную нам линку
     const setStyled = (navData: any) => ({
         color: navData.isActive ? '#BD9365' : '#282828',
         fill: navData.isActive ? '#BD9365' : '#282828'
@@ -23,11 +24,12 @@ export const MainFooter = () => {
 
     return (
         <div className={styled.main_footer}>
-            {FooterMenu.map((main, i) => <NavLink style={setStyled} to={main.link}
-                                                  className={styled.one_icon} key={i + main.text}>
-                {main.img}
-                <p className={styled.text}>{main.text}</p>
-            </NavLink>)}
+            {FooterMenu.map((main, i) =>
+                <NavLink style={setStyled} to={main.link}
+                         className={styled.one_icon} key={i + main.text}>
+                    {main.img}
+                    <p className={styled.text}>{main.text}</p>
+                </NavLink>)}
         </div>
     )
 }
