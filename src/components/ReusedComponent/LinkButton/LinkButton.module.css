@@ -1,0 +1,27 @@
+.link_button_block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 16px;
+}
+
+.video,
+.comments,
+.questions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100%/3);
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px 0;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 350px) {
+    .video,
+    .comments,
+    .questions {
+       font-size: 13px;
+    }
+}

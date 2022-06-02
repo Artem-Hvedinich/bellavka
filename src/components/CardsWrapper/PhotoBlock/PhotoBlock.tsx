@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {FC} from 'react';
 import styles from './PhotoBlock.module.css'
 import {ButtonBack} from "../../../Utils/ButtonBack/ButtonBack";
 import {Swiper, SwiperSlide} from 'swiper/react';
@@ -6,29 +6,28 @@ import {Pagination} from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import {SearchImg} from "../../../common/images/SearchImg";
+import {ResponseCardsType} from "../../../types/cardTypes";
 
-interface PhotoType {
-    photos: [],
-    salePercent: number,
-    video?: string
+type PropsType = {
+    cards: ResponseCardsType
 }
 
+export const PhotoBlock: FC<PropsType> = React.memo(({cards}) => {
 
-export const PhotoBlock = React.memo(({photos, salePercent, video}: PhotoType) => {
-
+        console.log(cards)
         const mySlidesPerView = (window.innerWidth / 250).toFixed(2);
-        console.log(mySlidesPerView)
-        let mappingPhoto = photos.map(photo =>
-            <SwiperSlide>
+        let mappingPhoto = cards.photos.map((photo, i) =>
+            <SwiperSlide key={photo + i}>
                 <img className={styles.photo}
                      src={photo}
                      alt={photo}
                 />
             </SwiperSlide>
         )
+
         mappingPhoto = [mappingPhoto[0],
-            <SwiperSlide>
-                <video src={video} autoPlay muted loop>
+            <SwiperSlide key={cards.videos[0].adaptive}>
+                <video src={cards.videos[0]["540p"]} autoPlay muted loop>
                 </video>
             </SwiperSlide>,
             ...mappingPhoto.slice(1, 12)]
@@ -46,13 +45,12 @@ export const PhotoBlock = React.memo(({photos, salePercent, video}: PhotoType) =
                     {mappingPhoto}
 
                 </Swiper>
-                <div className={styles.sale}>{`-${salePercent}%`}</div>
+                <div className={styles.sale}>{`-${cards.salePercent}%`}</div>
                 <ButtonBack onClick={() => {
                     alert('Sorry, this button in progress')
                 }}/>
                 <SearchImg/>
             </div>
         )
-            ;
     }
 )

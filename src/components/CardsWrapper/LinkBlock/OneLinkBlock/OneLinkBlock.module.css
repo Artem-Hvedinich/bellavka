@@ -12,17 +12,17 @@
     overflow-wrap: anywhere
 }
 
-.modal:first-child{
+.modal:first-child {
     margin-right: 8px;
 }
-.modal:last-child{
+
+.modal:last-child {
     margin-left: 8px;
 }
 
 .icon_count_block {
     display: flex;
     align-items: end;
-    color: #BD9365;
 }
 
 .header_block {
@@ -34,3 +34,7 @@
     margin-left: 6px;
 }
 
+a {
+    display: flex;
+    text-decoration: none;
+}

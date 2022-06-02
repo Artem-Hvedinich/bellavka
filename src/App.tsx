@@ -1,28 +1,30 @@
 import React, {useEffect} from 'react';
 import './App.css';
-import {getProductCard} from "./store/reducer";
+import {getComments, getProductCard} from "./store/reducer";
 import {useDispatch} from "react-redux";
-import {TypedDispatch, useAppSelector} from './store/store';
-import {CardsWrapper} from "./components/CardsWrapper/CardsWrapper";
-import {MainFooter} from './components/MainFooter/MainFooter';
+import {TypedDispatch} from './store/store';
+import {Card} from "./components/CardsWrapper/Card";
+import {Navigate, Route, Routes} from "react-router-dom";
+import {Comments} from "./components/Comments/Comments";
+import {ErrorPage} from "./components/ErrorPage";
 
 function App() {
     console.log('App rendered')
-    const status = useAppSelector(state => state.CardsReducer.status)
-    const dispatch = useDispatch<TypedDispatch>();
 
+    const dispatch = useDispatch<TypedDispatch>();
     useEffect(() => {
         dispatch(getProductCard())
-    }, [dispatch])
-
-    if (status === 'loading') {
-        return <div>...Loading</div>
-    }
+        dispatch(getComments())
+    }, [])
 
     return (
         <div className='App'>
-            <CardsWrapper/>
-            <MainFooter/>
+            <Routes>
+                <Route path={'/'} element={<Navigate to={'/card'}/>}/>
+                <Route path={'/card'} element={<Card/>}/>
+                <Route path={'/comments'} element={<Comments/>}/>
+                <Route path={'/404'} element={<ErrorPage/>}/>
+            </Routes>
         </div>
     )
 }

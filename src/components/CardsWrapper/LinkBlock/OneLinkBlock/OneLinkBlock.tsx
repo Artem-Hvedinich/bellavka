@@ -1,25 +1,28 @@
 import React from 'react';
 import styled from './OneLinkBlock.module.css'
 import {RightArrow} from "../../../../common/images/RightArrow";
+import {NavLink} from "react-router-dom";
 
 interface ModalType {
     count: number
     title: string
     icon: any
-    onClick: () => void
+    link: string
 }
 
-export const OneLinkBlock = ({count, title, icon, onClick}: ModalType) => {
+export const OneLinkBlock = ({count, title, icon, link}: ModalType) => {
     return (
-        <div className={styled.modal} onClick={onClick}>
-            <div className={styled.header_block}>
-                <div className={styled.icon_count_block}>
-                    {icon}
-                    <p className={styled.count}>+{count}</p>
+        <NavLink style={{ color: '#BD9365'}} to={link}>
+            <div className={styled.modal}>
+                <div className={styled.header_block}>
+                    <div className={styled.icon_count_block}>
+                        {icon}
+                        <p className={styled.count}>+{count}</p>
+                    </div>
+                    <RightArrow/>
                 </div>
-                <RightArrow/>
+                <div>{title}</div>
             </div>
-            <div>{title}</div>
-        </div>
+        </NavLink>
     );
 };

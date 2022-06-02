@@ -1,0 +1,40 @@
+.size_block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 8px 0;
+}
+
+.name {
+
+    width: 50%;
+    font-size: 14px;
+}
+
+.percent_block {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.line,
+.line_percent {
+    border-width: 0;
+    border-style: solid;
+    border-bottom-width: 2px;
+}
+
+.line {
+    width: 100%;
+    border-color: #DDDDDD;
+    margin-right: 20px;
+}
+
+.line_percent {
+    position: relative;
+    top: 2px;
+    border-color: #282828;
+}

@@ -1,0 +1,7 @@
+.rating_block {
+    flex-direction: column;
+    padding: 12px;
+    margin: 0 17px;
+    background: #FAF1E8;
+    border-radius: 10px;
+}
