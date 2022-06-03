@@ -6,7 +6,7 @@ import {LinkBlock} from "./LinkBlock/LinkBlock";
 import {InfoBlock} from "./InfoBlock/InfoBlock";
 import {MainFooter} from "../MainFooter/MainFooter";
 import {ViewedStorage} from './ViewedStorage/ViewedStorage';
-import {localStorageFunction} from '../../Utils/localStorageFunction';
+import {localStorageFunction} from '../../utils/localStorageFunction';
 
 export const Card = () => {
     const cards = useAppSelector<ResponseCardsType>(state => state.CardsReducer.card);

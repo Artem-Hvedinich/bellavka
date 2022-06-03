@@ -2,7 +2,7 @@ import React from 'react';
 import styled from './RatingBlock.module.css'
 import {ResponseCommentType} from "../../../types/commentType";
 import {SizesRating} from './SizesRating/SizesRating';
-import {RatingStarsComponent} from "../../../Utils/RatingStarsComponent/RatingStarsComponent";
+import {RatingStarsComponent} from "../../../utils/RatingStarsComponent/RatingStarsComponent";
 
 export const RatingBlock = React.memo(({comments}: { comments: ResponseCommentType }) => {
 

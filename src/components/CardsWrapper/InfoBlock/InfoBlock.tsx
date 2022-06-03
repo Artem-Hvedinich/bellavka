@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {ResponseCardsType} from "../../../types/cardTypes";
-import {SizeWrapper} from "../../../Utils/SizeWrapper/SizeWrapper";
+import {SizeWrapper} from "../../../utils/SizeWrapper/SizeWrapper";
 import styled from './InfoBlock.module.css'
 import {ButtonBlock} from "./ButtonBlock/ButtonBlock";
 import {MoreImg} from "../../../common/images/MoreImg";

@@ -1,10 +1,10 @@
 import React from 'react';
 import {useAppSelector} from "../../store/store";
-import {ButtonBack} from "../../Utils/ButtonBack/ButtonBack";
+import {ButtonBack} from "../../utils/ButtonBack/ButtonBack";
 import {NavLink} from "react-router-dom";
 import {RatingBlock} from './RaitingBlock/RatingBlock';
 import {MainFooter} from "../MainFooter/MainFooter";
-import {LinkButton} from '../ReusedComponent/LinkButton/LinkButton';
+import {LinkButton} from './LinkButton/LinkButton';
 import {OneCommentBlock} from "./OneCommentBlock/OneCommentBlock";
 
 export const Comments = () => {

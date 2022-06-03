@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from './OneCommentBlock.module.css'
-import {RatingStarsComponent} from "../../../Utils/RatingStarsComponent/RatingStarsComponent";
+import {RatingStarsComponent} from "../../../utils/RatingStarsComponent/RatingStarsComponent";
 import {DataType} from '../../../types/commentType';
 import {AnswersBlock} from './AnswersBlock/AnswersBlock';
 

@@ -1,13 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import styles from './PhotoBlock.module.css'
-import {ButtonBack} from "../../../Utils/ButtonBack/ButtonBack";
+import {ButtonBack} from "../../../utils/ButtonBack/ButtonBack";
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {Pagination} from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import {SearchImg} from "../../../common/images/SearchImg";
 import {ResponseCardsType} from "../../../types/cardTypes";
-import {debounce} from '../../../Utils/debounce';
+import {debounce} from '../../../utils/debounce';
 
 export const PhotoBlock = React.memo(({cards}: { cards: ResponseCardsType }) => {
 
