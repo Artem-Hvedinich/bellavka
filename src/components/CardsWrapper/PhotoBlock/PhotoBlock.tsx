@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {useEffect, useState} from 'react';
 import styles from './PhotoBlock.module.css'
 import {ButtonBack} from "../../../Utils/ButtonBack/ButtonBack";
 import {Swiper, SwiperSlide} from 'swiper/react';
@@ -7,15 +7,18 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import {SearchImg} from "../../../common/images/SearchImg";
 import {ResponseCardsType} from "../../../types/cardTypes";
+import {debounce} from '../../../Utils/debounce';
 
-type PropsType = {
-    cards: ResponseCardsType
-}
+export const PhotoBlock = React.memo(({cards}: { cards: ResponseCardsType }) => {
 
-export const PhotoBlock: FC<PropsType> = React.memo(({cards}) => {
-
-        //Контролирует количество фотографий
-        const mySlidesPerView = (window.innerWidth / 250).toFixed(2);
+        //Контролирует количество фотографий на разных экранах
+        const [dimensions, setDimensions] = useState(window.innerWidth / 250)
+        useEffect(() => {
+            const debouncedHandler = debounce(function handleResize() {
+                setDimensions(window.innerWidth / 250)
+            }, 10)
+            window.addEventListener('resize', debouncedHandler)
+        })
 
         // Мапит фото и добавляет видео в массив
         let mappingPhoto = cards.photos.map((photo, i) =>
@@ -38,7 +41,7 @@ export const PhotoBlock: FC<PropsType> = React.memo(({cards}) => {
                 <Swiper
                     className={styles.swiper}
                     modules={[Pagination]}
-                    slidesPerView={+mySlidesPerView}
+                    slidesPerView={+dimensions}
                     slidesPerGroup={1}
                     pagination={{clickable: true}}
                 >

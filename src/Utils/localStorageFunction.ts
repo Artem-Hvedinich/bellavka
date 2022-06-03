@@ -1,16 +1,10 @@
-import {ResponseCardsType} from "../types/cardTypes";
 
-export function localStorageFunction(cards: ResponseCardsType, pop:number) {
+export function localStorageFunction(cards: any, howMuch:number) {
+    //чистая функция с принципом инкапсуляции
     //@ts-ignore
     let sessionStore = JSON.parse(sessionStorage.getItem('ViewedStorageArray')) || [];
-    sessionStore.unshift({
-        retail: cards.price.retail,
-        retailOld: cards.price.retailOld,
-        name: cards.brand.value,
-        kits: cards.kits.map(m => m.value).join(', '),
-        img: cards.photos.slice(0, 1).toString()
-    });
-    sessionStore.length > pop && sessionStore.pop()
+    sessionStore.unshift({...cards});
+    sessionStore.length > howMuch && sessionStore.pop()
     sessionStorage.setItem('ViewedStorageArray', JSON.stringify(sessionStore));
     return sessionStore
 }

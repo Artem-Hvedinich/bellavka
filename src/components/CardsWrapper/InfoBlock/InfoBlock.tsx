@@ -58,7 +58,9 @@ export const InfoBlock = React.memo(({cards}: { cards: ResponseCardsType }) => {
                         <SizeWrapper key={height.id} value={height.value}/>)}
                 </div>
             </div>
+
             <ButtonBlock/>
+
             <div className={'middle_margin'}>
                 <h2 className={'min_margin'}>Цвета:</h2>
                 <div>

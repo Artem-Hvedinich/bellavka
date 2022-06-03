@@ -9,11 +9,8 @@ import {OneCommentBlock} from "./OneCommentBlock/OneCommentBlock";
 
 export const Comments = () => {
     const comments = useAppSelector(state => state.CardsReducer.comments)
-    console.log(comments)
 
-    if (!comments.message) {
-        return <div>...Loading</div>
-    }
+    if (!comments.message) return <div>...Loading</div>
 
     return (
         <div style={{minHeight: "100vh"}}>

@@ -5,7 +5,7 @@ import {ClickImg} from "../../../../common/images/ClickImg";
 
 export const ButtonBlock = () => {
     return (
-        <div className={styled.button_block}>
+        <div className={`${styled.button_block} middle_margin`}>
             <button onClick={() => alert('No work')} className={`${styled.button_buy} jc_ai_center`}>
                 <ClickImg/>
                 <p className={styled.text_wrapper}>Купить в 1 клик</p>
