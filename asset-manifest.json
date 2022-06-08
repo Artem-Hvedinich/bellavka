@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/bellavka/static/css/main.c6a0a58f.css",
-    "main.js": "/bellavka/static/js/main.bf866391.js",
+    "main.css": "/bellavka/static/css/main.81ff54d2.css",
+    "main.js": "/bellavka/static/js/main.b0cc7213.js",
     "static/js/787.95e17f40.chunk.js": "/bellavka/static/js/787.95e17f40.chunk.js",
     "index.html": "/bellavka/index.html",
-    "main.c6a0a58f.css.map": "/bellavka/static/css/main.c6a0a58f.css.map",
-    "main.bf866391.js.map": "/bellavka/static/js/main.bf866391.js.map",
+    "main.81ff54d2.css.map": "/bellavka/static/css/main.81ff54d2.css.map",
+    "main.b0cc7213.js.map": "/bellavka/static/js/main.b0cc7213.js.map",
     "787.95e17f40.chunk.js.map": "/bellavka/static/js/787.95e17f40.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c6a0a58f.css",
-    "static/js/main.bf866391.js"
+    "static/css/main.81ff54d2.css",
+    "static/js/main.b0cc7213.js"
   ]
 }
